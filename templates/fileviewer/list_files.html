@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Files and Directories</title>
+</head>
+<body>
+    <h1>Files and Directories</h1>
+    {% load custom_filters %}
+    <ul>
+        {% for dir in dirs %}
+        <li><a href="{% url 'list_files' path=dir %}">{{ dir|basename }}/</a></li>
+        {% endfor %}
+        {% for file in files %}
+        <li><a href="{% url 'view_file' path=file %}">{{ file|basename }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
