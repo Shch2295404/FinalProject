@@ -36,12 +36,14 @@ FinalProject/
 ├── requirements.txt          # Python-зависимости
 └── README.md / LICENSE
 ```
+
 ```
 Узел	Назначение	Особые замечания
 flower_delivery/settings.py	Глобальная конфигурация проекта	Читает config.json; fallback-ключ SECRET_KEY хранится в репозитории — убрать в переменные окружения (raw.githubusercontent.com)
 
 media/products/	Фотографии товаров	При росте объёма вынести в S3/MinIO
 fileviewer/	Просмотр файлов на сервере	Нет аутентификации; можно читать произвольные файлы внутри base_dir (raw.githubusercontent.com)
+
 ```
 3. Модули / пакеты (основное API)
 Модуль	Роль и публичный интерфейс	Зависимости
